@@ -1,0 +1,44 @@
+﻿@model iSchoolWebApp.Models.EmploymentRootModel
+@{
+
+}
+
+<h1>Outcomes</h1>
+
+<h3>@Model.introduction.title</h3>
+
+
+
+@foreach (var stat in Model.degreeStatistics.statistics)
+{
+    <p class="bigText">  @stat.value </p>
+    <p>@stat.description</p>
+}
+
+@foreach (var content in Model.introduction.content)
+{
+    <h4>@content.title</h4>
+    <p>@content.description</p>
+}
+
+<h4> Current Employers </h4>
+
+@foreach (var emp in Model.employers.employerNames)
+{
+    <p> emp </p> <br>
+}
+
+<div id="coops">
+    <div id="coopTable">
+        <table class="table" id="coop">
+            <thead>
+                <tr>
+                    <th>Employer</th>
+                    <th>City</th>
+                    <th>Degree</th>
+                </tr>
+               
+            </thead>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@model iSchoolWebApp.Models.AboutRootModel
+@{ ViewData["Title"] = Model.Title; }
+<section id="top">
+    <div id="title" style="text-align: center;">
+        <h3>@Model.About.title</h3>
+    </div>
+</section>
+<canvas class="background"></canvas>
+<section id="topTwo">
+    <div id="overview">
+        <h2>Overview: </h2>
+        <p id="box">@Model.About.description</p>
+    </div>
+    <div id="quote">
+        <figure>
+            <blockquote>
+                <p class="quotation">
+                    @Model.About.quote
+                </p>
+            </blockquote>
+            <figcaption>@Model.About.quoteAuthor</figcaption>
+        </figure>
+    </div>
+</section>

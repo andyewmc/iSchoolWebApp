@@ -1,0 +1,80 @@
+﻿@model iSchoolWebApp.Models.FacultyRootModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h1>@Model.Title</h1>
+
+@foreach (var faculty in Model.faculty) { 
+
+    <div style="min-height:260px;width:200px;display:inline-table">
+        <div class="thumnail">
+            <!--image path, name, username-->
+            <img src="@faculty.imagePath" atl="@faculty.username" style="max-width:200px" />
+            <h3 style="font-size:small">
+                @faculty.name
+            </h3>
+
+            <!--tagline-->
+            @if (@faculty.tagline != "")
+            {
+        <h3 style="font-size:small">
+            @faculty.tagline
+        </h3>}
+
+            <!--title-->
+            <h3 style="font-size:small">
+                @faculty.title
+            </h3>
+
+            <!--Areas of interest-->
+            @if (@faculty.interestArea != "")
+            {
+        <h3 style="font-size:small">
+            Areas of Interest: @faculty.interestArea
+        </h3>}
+
+            <!--website-->
+            @if (@faculty.website != "")
+            {
+        <h3 style="font-size:small">
+            <a href="@faculty.website" target="_blank">Faculty Site</a>
+        </h3>}
+
+            <!--email-->
+            @if (@faculty.email != "")
+            {
+        <h3 style="font-size:small">
+            Email: @faculty.email
+        </h3>}
+
+            <!--phone-->
+            @if (@faculty.phone != "" | @faculty.phone != "null")
+            {
+        <h3 style="font-size:small">
+            Phone: @faculty.phone
+        </h3>}
+
+            <!--office-->
+            @if (@faculty.office != "" | @faculty.office != "null")
+            {
+        <h3 style="font-size:small">
+            Phone: @faculty.office
+        </h3>}
+
+            <!--twitter-->
+            @if (@faculty.twitter != "" | @faculty.twitter != "null")
+            {
+        <h3 style="font-size:small">
+            Twitter Handle: @faculty.twitter
+        </h3>}
+
+            <!--facebook-->
+            @if (@faculty.facebook != "" | @faculty.facebook != "null")
+            {
+        <h3 style="font-size:small">
+            Facebook: @faculty.facebook
+        </h3>}
+        </div>
+    </div>
+}

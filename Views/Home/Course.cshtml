@@ -1,0 +1,8 @@
+﻿@model iSchoolWebApp.Models.CourseRootModel
+@{ ViewData["Title"] = Model.Title; }
+
+@foreach (var course in Model.course)
+{
+    <h3>@course.title (@course.courseID)</h3>
+    <p>@course.description</p>
+}

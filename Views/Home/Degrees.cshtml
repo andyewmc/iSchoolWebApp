@@ -1,0 +1,15 @@
+﻿@model iSchoolWebApp.Models.DegreesRootModel
+
+@{
+    ViewData["Title"] = @Model.Title;
+}
+
+<h2>@Model.Title</h2>
+<h3> Degrees </h3>
+@foreach (var undergraduate in Model.undergraduate)
+{
+    <div id="holdMinors">
+        <h4>@undergraduate.title (@undergraduate.degreeName)</h4>
+        <div><p>@undergraduate.description</p></div>
+    </div>
+}

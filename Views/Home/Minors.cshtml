@@ -1,0 +1,14 @@
+﻿@model iSchoolWebApp.Models.UgMinorsRoot
+
+@{ ViewData["Title"] = Model.Title; }
+
+<section id="minors">
+    <h3>Minors</h3>
+    <div id="holdMinors">
+        @foreach (var minor in Model.UgMinors)
+        {
+            <h4> @minor.title (@minor.name)</h4>
+            <div><p>  @minor.description </p> <p>@minor.note</p></div>
+        }
+    </div>
+</section>
